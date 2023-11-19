@@ -1,0 +1,46 @@
+import java.util.Random;
+import java.util.Scanner;
+
+
+public class Exercise_2 {
+    // Rock paper scissor
+
+// 1 --> rock
+// 2 --> paper
+// 3 --> scissor
+
+    public static void RPS(int n,int RandomNum){
+            
+            System.out.printf("User choice is %d \nComputer choice is %d \n",n,RandomNum);
+            if ((RandomNum == 1 && n == 2)||RandomNum==2 && n==3 || RandomNum ==3 && n==1 ) {
+                System.out.println("User is winner");
+            }
+            else if(RandomNum == n){
+                System.out.println("Drawn");
+            }
+            else if(n>3 || n<1 ){ 
+                System.out.println("Enter choice from 1,2,3");
+            }
+        
+            else{
+                System.out.println("Computer is winner");
+            }
+
+            System.out.print("\n\n");
+        }
+    public static void main(String[] args) {
+        while (true) {
+            Random random = new Random();
+        // System.out.println(random.nextInt(1,4));
+
+            int RandomNum = random.nextInt(1,4);
+
+
+            int choice;
+            Scanner sc = new Scanner(System.in);
+            System.out.printf("Enter choice : ");
+            choice = sc.nextInt();
+
+            RPS(choice,RandomNum);
+        }
+    }}
