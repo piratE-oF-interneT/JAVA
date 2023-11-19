@@ -30,6 +30,7 @@ public class Exercise_2 {
         }
     public static void main(String[] args) {
         while (true) {
+            System.out.println("1 --> Rock \n2 --> Paper \n3 --> Scissors");
             Random random = new Random();
         // System.out.println(random.nextInt(1,4));
 
